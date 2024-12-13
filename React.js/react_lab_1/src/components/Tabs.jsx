@@ -3,7 +3,7 @@ const Tabs = ({ children, buttons }) => {
         <menu>
             {buttons}
         </menu>
-        {children}
+            {children}
     </>
 }
 
