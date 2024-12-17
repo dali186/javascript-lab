@@ -7,6 +7,8 @@ module.exports = {
     extend: {},
     fontFamily: {
       Cursive : ["Vujahday Script"],
+      ChubbyKor : ["Jua"],
+      Chubby : ["Bebas Neue"],
     }
   },
   plugins: [],
