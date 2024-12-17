@@ -42,6 +42,10 @@ body {
   display: flex;
   justify-content: space-evenly;
   gap: 1.5rem;
+  /* 마커 제거 추가 */
+  list-style-type: none; 
+  padding: 0;            
+  margin: 0; 
 }
 
 #user-input label {
