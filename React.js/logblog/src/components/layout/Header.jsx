@@ -20,9 +20,6 @@ const Header = ({marqueeContext}) => {
         {/* Logo and Title */}
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="h-10 w-auto mr-4" />
-          <Marquee className="text-xl font-Cursive tracking-wide" speed={25}>
-            {randomMarquee(marqueeContext)}
-          </Marquee>
         </div>
 
         {/* Desktop Navigation */}
@@ -68,6 +65,11 @@ const Header = ({marqueeContext}) => {
             )}
           </svg>
         </button>
+      </div>
+      <div className="text-center text-white bg-red-900 hover:bg-red-800">
+        <Marquee className="text-xl font-Cursive tracking-wide" speed={25}>
+            {randomMarquee(marqueeContext)}
+        </Marquee>
       </div>
 
       {/* Mobile Navigation */}

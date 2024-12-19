@@ -1,25 +1,30 @@
-import Layout from '../components/layout/Layout';
+import Layout from '../components/layout/Layout';       
+import { MAIN_GREETINGS } from '../assets/static/constants';       
 
 const MainPage = () => {
 
-    const blogPosts = [
-        { id: 1, title: "How to Start Your Day Right", date: "2024-12-15", summary: "Discover tips for a productive and happy morning routine." },
-        { id: 2, title: "Top 10 JavaScript Tricks", date: "2024-12-10", summary: "Explore the most effective JavaScript features you should know." },
-        { id: 3, title: "React Best Practices", date: "2024-12-05", summary: "Learn how to write clean and maintainable React code." },
-    ];
-
     return (
-       <Layout>
-            <div className="bg-blue-500 bg-[url('./assets/background/bg_paper_black.jpg')] bg-cover bg-center w-full h-screen md:h-4/5">
-                <div className='bg-main h-screen w-screen bg-cover'>
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-                        <h1 className="text-4xl font-bold">안녕하세요</h1>
-                        <p className="text-xl">이곳은 정중앙입니다.</p>
+        <Layout>
+            <div className="bg-blue-500 bg-[url('./assets/background/bg_paper_black.jpg')] bg-cover bg-center w-full h-screen">
+                <div className='h-screen w-screen bg-cover'>
+                    <div className='pt-5 mb-1 text-center'>
+                        <h1 className='text-5xl lg:text-7xl font-Cursive font-bold'>{MAIN_GREETINGS.TITLE}</h1>
+                    </div>
+                    <div className='pt-1 mb-10 text-center'>
+                        <div className='text-3xl lg:text-5xl font-Cursive font-bold text-red-900 underline decoration-2'>{MAIN_GREETINGS.SUB_TITLE}</div>
+                    </div>
+                    <div className='pt-5 mb-10 text-center'>
+                        <button className="bg-yellow-500 text-white py-2 px-4 rounded-lg flex items-center space-x-2 hover:bg-yellow-600">
+                            <span>🎉</span>
+                            <span>Celebrate</span>
+                        </button>
+                    </div>
+                    <div className='pt-5 mb-10 text-center'>
+                        <div className='text-3xl lg:text-5xl font-Chubby font-bold'>{MAIN_GREETINGS.EXPLAIN}</div>
                     </div>
                 </div>
             </div>
-            
-       </Layout>
+    </Layout>
     );
 }
 
