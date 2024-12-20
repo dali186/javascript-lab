@@ -14,5 +14,9 @@ export const MAIN_GREETINGS = {
 }
 
 export const SELECT_GRETTINGS = {
-    TITLE: 'What do you want?'
+    TITLE: 'What do you want?',
+    ITME_LIST: [
+        ['Write Article', '/article/write'],
+        ['Look up Articles', '/article/read'],
+    ]
 }

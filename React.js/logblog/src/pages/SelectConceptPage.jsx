@@ -13,32 +13,16 @@ const BrdWritePage = () => {
                     {SELECT_GRETTINGS.TITLE}
                 </h1>
                 <div className="flex flex-col gap-4 md:flex-row md:gap-6">
-                {/* 게시글 작성 버튼 */}
-                <button
-                    className="w-48 h-48 md:w-64 md:h-64 backdrop-invert text-white text-lg md:text-xl font-semibold rounded-lg shadow-lg hover:backdrop-invert-0 
-                            focus:outline-none transition duration-300"
-                    onClick={() => navigate("/brd/write")}
-                >
-                    게시글 작성
-                </button>
-
-                {/* 게시글 목록 버튼 */}
-                <button
-                    className="w-48 h-48 md:w-64 md:h-64 backdrop-invert text-white text-lg md:text-xl font-semibold rounded-lg shadow-lg hover:backdrop-invert-0 
-                            focus:outline-none transition duration-300"
-                    onClick={() => navigate("/brd/list")}
-                >
-                    게시글 목록
-                </button>
-
-                {/* 사용자 정보 버튼 */}
-                <button
-                    className="w-48 h-48 md:w-64 md:h-64 backdrop-invert text-white text-lg md:text-xl font-semibold rounded-lg shadow-lg hover:backdrop-invert-0 
-                            focus:outline-none transition duration-300"
-                    onClick={() => navigate("/user/info")}
-                >
-                    사용자 정보
-                </button>
+                    {SELECT_GRETTINGS.ITME_LIST.map((list) => {
+                    
+                        return <button
+                            className="w-48 h-48 md:w-64 md:h-64 backdrop-invert text-white text-2xl md:text-4xl font-semibold rounded-lg shadow-lg hover:backdrop-invert-0 
+                                focus:outline-none transition duration-300 font-Cursive"
+                            onClick={() => navigate(list[1])}
+                            >
+                                {list[0]}
+                            </button>
+                        })}
                 </div>
             </div>
         </div>
